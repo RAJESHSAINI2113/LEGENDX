@@ -20,7 +20,7 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 from LEGEND import StartTime
-from LEGEND.events import lunabot
+from LEGEND.events import legendbot
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)

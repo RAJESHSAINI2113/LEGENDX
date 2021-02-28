@@ -19,7 +19,7 @@ blacklisted = []
 
 
 async def getresp(query):
-    url = f"https://lunabot.tech/?query={query}"
+    url = f"https://legendbot.tech/?query={query}"
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as res:
             res = await res.json()

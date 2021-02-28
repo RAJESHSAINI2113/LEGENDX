@@ -15,7 +15,7 @@ from LEGEND import MONGO_DB_URI
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["lunabot"]
+db = client["legendbot"]
 gbanned = db.gban
 
 
@@ -87,7 +87,7 @@ def register(**args):
     return decorator
 
 
-def lunabot(**args):
+def legendbot(**args):
     pattern = args.get("pattern", None)
     disable_edited = args.get("disable_edited", False)
     ignore_unsafe = args.get("ignore_unsafe", False)
@@ -167,7 +167,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.register = register
-        mod.lunabot = lunabot
+        mod.legendbot = legendbot
         mod.tbot = tbot
         mod.logger = logging.getLogger(shortname)
         spec.loader.exec_module(mod)
