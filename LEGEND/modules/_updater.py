@@ -1,11 +1,11 @@
-from Luna.events import register
+from LEGEND.events import register
 from os import remove, execle, path, environ
 import asyncio
 import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 import heroku3
-from Luna import OWNER_ID, tbot, UPSTREAM_REPO_URL
+from LEGEND import OWNER_ID, tbot, UPSTREAM_REPO_URL
 
 
 # UPSTREAM_REPO_URL = "https://github.com/MissJuliaRobot/MissJuliaRobot.git"
@@ -176,6 +176,6 @@ async def upstream(ups):
             repo.git.reset("--hard", "FETCH_HEAD")
         reqs_upgrade = await updateme_requirements()
         await lol.edit("`Successfully Updated!\n" "restarting......`")
-        args = [sys.executable, "-m", "Luna"]
+        args = [sys.executable, "-m", "LEGEND"]
         execle(sys.executable, *args, environ)
         return

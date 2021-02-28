@@ -6,12 +6,12 @@ from pathlib import Path
 
 from telethon import events
 
-from Luna import CMD_LIST, LOAD_PLUG, tbot
+from LEGEND import CMD_LIST, LOAD_PLUG, tbot
 import glob
 import sys
-from Luna import ubot
+from LEGEND import ubot
 from pymongo import MongoClient
-from Luna import MONGO_DB_URI
+from LEGEND import MONGO_DB_URI
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
@@ -150,20 +150,20 @@ def load_module(shortname):
         pass
     elif shortname.endswith("_"):
         import importlib
-        import Luna.events
+        import LEGEND.events
 
-        path = Path(f"Luna/modules/{shortname}.py")
-        name = "Luna.modules.{}".format(shortname)
+        path = Path(f"LEGEND/modules/{shortname}.py")
+        name = "LEGEND.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         print("Successfully imported " + shortname)
     else:
         import importlib
-        import Luna.events
+        import LEGEND.events
 
-        path = Path(f"Luna/modules/{shortname}.py")
-        name = "Luna.modules.{}".format(shortname)
+        path = Path(f"LEGEND/modules/{shortname}.py")
+        name = "LEGEND.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.register = register
@@ -171,11 +171,11 @@ def load_module(shortname):
         mod.tbot = tbot
         mod.logger = logging.getLogger(shortname)
         spec.loader.exec_module(mod)
-        sys.modules["Luna.modules." + shortname] = mod
+        sys.modules["LEGEND.modules." + shortname] = mod
         print("Successfully imported " + shortname)
 
 
-path = "Luna/modules/*.py"
+path = "LEGEND/modules/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:

@@ -1,12 +1,12 @@
-from Luna import tbot, OWNER_ID
-from Luna.events import register
+from LEGEND import tbot, OWNER_ID
+from LEGEND.events import register
 import os
 import asyncio
 import os
 import time
 from datetime import datetime
-from Luna import TEMP_DOWNLOAD_DIRECTORY as path
-from Luna import TEMP_DOWNLOAD_DIRECTORY
+from LEGEND import TEMP_DOWNLOAD_DIRECTORY as path
+from LEGEND import TEMP_DOWNLOAD_DIRECTORY
 from datetime import datetime
 
 client = tbot
@@ -34,7 +34,7 @@ async def Prof(event):
 import time
 from io import BytesIO
 from pathlib import Path
-from Luna import tbot as borg
+from LEGEND import tbot as borg
 from telethon import functions, types
 from telethon.errors import PhotoInvalidDimensionsError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
@@ -55,7 +55,7 @@ async def get(event):
     else:
         await event.reply("reply to text message as `.ttf <file name>`")
 
-from Luna.events import load_module
+from LEGEND.events import load_module
 import asyncio
 import os
 from datetime import datetime
@@ -74,7 +74,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "Luna/modules/",  # pylint:disable=E0602
+                    "LEGEND/modules/",  # pylint:disable=E0602
                 )
             )
             if "(" not in downloaded_file_name:

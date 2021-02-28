@@ -1,4 +1,4 @@
-from Luna import tbot, CMD_HELP
+from LEGEND import tbot, CMD_HELP
 import os
 import requests, json
 from pymongo import MongoClient
@@ -8,8 +8,8 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-from Luna import *
-from Luna.events import register
+from LEGEND import *
+from LEGEND.events import register
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
@@ -310,7 +310,7 @@ async def torrentstop(event):
     await tbot.edit_message(
         chatid,
         msgid,
-        "Thanks for using.\n❤️ from [Luna](t.me/lunaevobot) !",
+        "Thanks for using.\n❤️ from [LEGEND](t.me/lunaevobot) !",
         link_preview=False,
     )
 

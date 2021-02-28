@@ -1,4 +1,4 @@
-from Luna import tbot
+from LEGEND import tbot
 from telethon.errors import (ChatAdminRequiredError, ImageProcessFailedError,
                              PhotoCropSizeSmallError)
 
@@ -24,12 +24,12 @@ from telethon.tl import types
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import *
 
-from Luna import *
-from Luna.events import register
+from LEGEND import *
+from LEGEND.events import register
 
 from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 
-from Luna import CMD_HELP
+from LEGEND import CMD_HELP
 from telethon.errors.rpcerrorlist import MessageDeleteForbiddenError
 
 

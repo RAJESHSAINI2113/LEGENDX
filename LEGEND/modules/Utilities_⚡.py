@@ -1,5 +1,5 @@
-from Luna.events import register
-from Luna import CMD_HELP
+from LEGEND.events import register
+from LEGEND import CMD_HELP
 import io
 import sys
 import traceback
@@ -11,16 +11,16 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 from telethon.errors import *
-from Luna import *
+from LEGEND import *
 import os
-from Luna import SUDO_USERS, OWNER_ID, DEV_USERS
+from LEGEND import SUDO_USERS, OWNER_ID, DEV_USERS
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
-from Luna import StartTime
-from Luna.events import lunabot
+from LEGEND import StartTime
+from LEGEND.events import lunabot
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)

@@ -1,5 +1,5 @@
-from Luna import tbot
-from Luna.events import register
+from LEGEND import tbot
+from LEGEND.events import register
 import secureme
 @register(pattern="^/encrypt (.*)")
 async def hmm(event):

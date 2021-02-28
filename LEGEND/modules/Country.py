@@ -1,5 +1,5 @@
-from Luna import tbot
-from Luna.events import register
+from LEGEND import tbot
+from LEGEND.events import register
 from countryinfo import CountryInfo
 import flag
 import html

@@ -1,9 +1,9 @@
 from google_trans_new import google_translator  
-from Luna import tbot
+from LEGEND import tbot
 import json
 import requests
-from Luna import CMD_HELP, MONGO_DB_URI
-from Luna.events import register
+from LEGEND import CMD_HELP, MONGO_DB_URI
+from LEGEND.events import register
 from telethon import *
 from telethon.tl import functions
 from pymongo import MongoClient

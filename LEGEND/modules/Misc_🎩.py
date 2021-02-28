@@ -1,9 +1,9 @@
-from Luna import CMD_HELP
+from LEGEND import CMD_HELP
 from bs4 import BeautifulSoup
 import urllib
-from Luna import OWNER_ID
-from Luna import SUDO_USERS
-from Luna import tbot
+from LEGEND import OWNER_ID
+from LEGEND import SUDO_USERS
+from LEGEND import tbot
 import glob
 import io
 import os
@@ -28,8 +28,8 @@ from telegraph import Telegraph
 import asyncio
 import shlex
 from typing import Tuple
-from Luna import *
-from Luna.events import register
+from LEGEND import *
+from LEGEND.events import register
 import sys
 from telethon import events
 import asyncio

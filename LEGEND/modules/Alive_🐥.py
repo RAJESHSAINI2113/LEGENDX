@@ -1,5 +1,5 @@
-from Luna import SUDO_USERS, OWNER_ID, tbot, DEV_USERS
-from Luna.events import register
+from LEGEND import SUDO_USERS, OWNER_ID, tbot, DEV_USERS
+from LEGEND.events import register
 from telethon.tl.types import ChatBannedRights
 from telethon import events
 from telethon.tl.functions.channels import EditBannedRequest

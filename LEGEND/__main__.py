@@ -1,8 +1,8 @@
 from sys import argv, exit
-from Luna import tbot
-from Luna import TOKEN
+from LEGEND import tbot
+from LEGEND import TOKEN
 
-import Luna.events
+import LEGEND.events
 
 try:
     tbot.start(bot_token=TOKEN)

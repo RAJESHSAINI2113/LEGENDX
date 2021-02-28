@@ -1,8 +1,8 @@
 #By @RoseLoverX
-from Luna.events import register
-from Luna import CMD_HELP
-from Luna import tbot as borg
-from Luna import TEMP_DOWNLOAD_DIRECTORY
+from LEGEND.events import register
+from LEGEND import CMD_HELP
+from LEGEND import tbot as borg
+from LEGEND import TEMP_DOWNLOAD_DIRECTORY
 import os
 from telethon import events
 from PIL import Image, ImageDraw, ImageFont
@@ -24,13 +24,13 @@ import numpy as np
 async def slogo(event):
     await event.reply("`Processing..`")
     text = event.pattern_match.group(2)
-    Image.open('./Luna/modules/resources/IMG_20210221_094024_218.jpg')
+    Image.open('./LEGEND/modules/resources/IMG_20210221_094024_218.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
     fillcolor = "white"
     shadowcolor = "black"
-    font = ImageFont.truetype("./Luna/modules/resources/Anabelle Script Light.otf", 300)
+    font = ImageFont.truetype("./LEGEND/modules/resources/Anabelle Script Light.otf", 300)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size

@@ -37,7 +37,7 @@ async def start(_, message):
         return
     await luna.send_chat_action(message.chat.id, "typing")
     await message.reply_text(
-        "**Only For Owner**\n/shutdown - `Shutdown Luna.`\n/blacklist - `Blacklist A User.`\n/whitelist - `Whitelist A User.`"
+        "**Only For Owner**\n/shutdown - `Shutdown LEGEND.`\n/blacklist - `Blacklist A User.`\n/whitelist - `Whitelist A User.`"
     )
 
 
@@ -155,7 +155,7 @@ async def chatpm(_, message):
 print(
     """
 -----------------
-| Luna Started! |
+| LEGEND Started! |
 -----------------
 
 """

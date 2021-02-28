@@ -1,6 +1,6 @@
 import requests
-from Luna import tbot
-from Luna.events import register
+from LEGEND import tbot
+from LEGEND.events import register
 url = "https://iamai.p.rapidapi.com/ask"
 
 @register(pattern="^/q (.*)")

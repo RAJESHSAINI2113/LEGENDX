@@ -1,5 +1,5 @@
 {
-  "name": "Luna Chat Bot",
+  "name": "LEGEND Chat Bot",
   "description": "A Telegram Group Management Bot",
   "logo": "https://telegra.ph/file/517f97b74ad036b2ef3c9.jpg",
   "keywords": ["telethon", "sqlalchemy", "mongodb"],

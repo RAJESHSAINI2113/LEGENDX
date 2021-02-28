@@ -1,7 +1,7 @@
-from Luna.events import register
-from Luna import CMD_HELP
-from Luna import tbot
-from Luna import TEMP_DOWNLOAD_DIRECTORY as TMP_DOWNLOAD_DIRECTORY
+from LEGEND.events import register
+from LEGEND import CMD_HELP
+from LEGEND import tbot
+from LEGEND import TEMP_DOWNLOAD_DIRECTORY as TMP_DOWNLOAD_DIRECTORY
 from telethon import events
 import os
 from PIL import Image

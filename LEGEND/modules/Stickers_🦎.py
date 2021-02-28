@@ -1,4 +1,4 @@
-from Luna import tbot, ubot, CMD_HELP
+from LEGEND import tbot, ubot, CMD_HELP
 from bs4 import BeautifulSoup as bs
 import urllib.request as urllib
 import requests
@@ -8,7 +8,7 @@ from io import BytesIO
 import os
 import math
 import datetime
-from Luna import MONGO_DB_URI
+from LEGEND import MONGO_DB_URI
 
 from telethon.tl.functions.messages import GetStickerSetRequest
 
@@ -20,7 +20,7 @@ from telethon.tl.types import (
 )
 
 
-from Luna.events import register
+from LEGEND.events import register
 from telethon import *
 from telethon import events
 from telethon.tl import functions

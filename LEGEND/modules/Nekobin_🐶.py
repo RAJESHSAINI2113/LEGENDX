@@ -1,7 +1,7 @@
-from Luna import tbot as borg
-from Luna.events import register
-from Luna import CMD_HELP
-from Luna import TEMP_DOWNLOAD_DIRECTORY
+from LEGEND import tbot as borg
+from LEGEND.events import register
+from LEGEND import CMD_HELP
+from LEGEND import TEMP_DOWNLOAD_DIRECTORY
 import logging
 import os
 from datetime import datetime

@@ -1,9 +1,9 @@
-from Luna import CMD_HELP, BOT_ID
+from LEGEND import CMD_HELP, BOT_ID
 import os
-from Luna import tbot
+from LEGEND import tbot
 from pymongo import MongoClient
-from Luna import MONGO_DB_URI
-from Luna.events import register
+from LEGEND import MONGO_DB_URI
+from LEGEND.events import register
 from telethon import types
 from telethon.tl import functions
 

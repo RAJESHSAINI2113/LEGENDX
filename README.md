@@ -1,7 +1,7 @@
-# LunaChatBot
+# LEGENDChatBot
 Just Another Telegram Ai Chat Bot Written In Python With Pyrogram.
 
-Public Instance Of This Bot Can Be Found On Telegram As [@LunaChatBot](https://t.me/LunaChatBot)
+Public Instance Of This Bot Can Be Found On Telegram As [@LEGENDChatBot](https://t.me/LEGENDChatBot)
 
 <img src="https://hamker.me/z/rohegch_luna.jpg" width="200" align="right">
 
@@ -13,8 +13,8 @@ Public Instance Of This Bot Can Be Found On Telegram As [@LunaChatBot](https://t
 
 ## Installation
 
-1. `git clone https://github.com/thehamkercat/LunaChatBot`
-2. `cd LunaChatBot`
+1. `git clone https://github.com/thehamkercat/LEGENDChatBot`
+2. `cd LEGENDChatBot`
 3. `pip3 install -r requirements.txt` to install the requirements.
 4. `cp sample_config.py config.py`
 5. Edit `config.ini` with your own values.
