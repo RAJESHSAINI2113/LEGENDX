@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "Luna"
+          find: "lunabot"
 
-          replace: "LEGEND"
+          replace: "legendbot"
 
       - name: Create Pull Request
 
