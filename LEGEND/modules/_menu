@@ -82,7 +82,7 @@ async def start(event):
             ],
         )
     else:
-        await event.reply("Heya Luna Here!,\nHow Can I Help Ya.")
+        await event.reply("Heya GRAND OFFICIAL is Here!,\nHow Can I Help Ya.")
 
 
 @tbot.on(events.CallbackQuery(pattern=r"start_again"))
