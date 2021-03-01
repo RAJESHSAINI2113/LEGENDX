@@ -120,12 +120,12 @@ async def _(event):
     userid = event.sender_id
     first_name = user.first_name
     packname = f"{first_name}'s Sticker Vol.{pack}"
-    packshortname = f"MissJuliaRobot_sticker_{userid}"
+    packshortname = f"GRAND OFFICIAL_sticker_{userid}"
     kanga = await event.reply(
         "`Kanging .`"
     )
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "@MissJuliaRobot.png"
+    file_ext_ns_ion = "@GRAND50_BOT.png"
     file = await event.client.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
