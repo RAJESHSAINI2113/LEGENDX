@@ -3,7 +3,7 @@ from LEGEND.events import register
 from telethon.tl.types import ChatBannedRights
 from telethon import events
 from telethon.tl.functions.channels import EditBannedRequest
-
+"""
 @register(pattern="^/alive")
 async def alive(event):
     if event.sender_id == OWNER_ID:
@@ -14,7 +14,7 @@ async def alive(event):
         await event.reply("I'm Alive Pro!")
     elif event.sender_id not in SUDO_USERS:
         await event.reply("★彡[Anie]彡★")
-
+"""
 @register(pattern="^/die")
 async def alive(event):
     if event.sender_id == OWNER_ID:
