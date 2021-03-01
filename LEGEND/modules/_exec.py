@@ -14,7 +14,7 @@ from telethon.tl.types import *
 from telethon.errors import *
 
 
-@register(pattern="^/exec (.*)")
+@register(pattern="^/bash (.*)")
 async def msg(event):
     if event.sender_id == OWNER_ID:
         pass
