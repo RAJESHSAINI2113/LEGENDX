@@ -14,36 +14,37 @@ from telethon.tl import functions
 
 from pymongo import MongoClient
 from LEGEND import MONGO_DB_URI
-BOT_VERSION = "3.0"
+
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["legendbot"]
+db = client["missjuliarobot"]
 approved_users = db.approve
 pagenumber = db.pagenumber
 
-
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
+
         return isinstance(
             (
                 await tbot(functions.channels.GetParticipantRequest(chat, user))
             ).participant,
             (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
         )
-    if isinstance(chat, types.InputPeerUser):
-        return True
+    if isinstance(chat, types.InputPeerChat):
 
+        ui = await tbot.get_peer_id(user)
+        ps = (
+            await tbot(functions.messages.GetFullChatRequest(chat.chat_id))
+        ).full_chat.participants.participants
+        return isinstance(
+            next((p for p in ps if p.user_id == ui), None),
+            (types.ChatParticipantAdmin, types.ChatParticipantCreator),
+        )
+    return None
 
-PM_START_TEXT = (
-    "[Julia]()"
-    + " "
-    + "**"
-    + "V"
-    + BOT_VERSION
-    + "**"
-)
-
-
+file1 = "https://telegra.ph/file/a48302e84366559b3614d.jpg"
+pm_caption = "Hi, my name is GRAND OFFICIAL!\nI'm a powerful group management bot\nAdd me to your groups as admin\nto manage your groups with my\ncommands\nYou can find my list of available\ncommands with /help"
+pmt = "Hello there! I'm GRAND OFFICIAL\nI'm a Telethon Based group management bot\n with a Much More! Have a look\nat the following for an idea of some of \nthe things I can help you with.\n\nMain commands available:\n/start : Starts me, can be used to check i'm alive or not.\n/help : PM's you this message.\n/help <module name> : PM's you info about that module.\n`/settings` : in PM: will send you your settings for all supported modules.\n~ in a group: will redirect you to pm, with all that chat's settings."
 @register(pattern="^/start$")
 async def start(event):
     approved_userss = approved_users.find({})
@@ -59,73 +60,69 @@ async def start(event):
             return
 
     if not event.is_group:
+        await tbot.send_file(event.chat_id, file=file1)
         await tbot.send_message(
             event.chat_id,
-            PM_START_TEXT,
+            pm_caption,
             buttons=[
                 [
                     Button.url(
-                        "Add To Group", "t.me/grand50_bot?startgroup=true"
+                        "Add To Group  👥", "t.me/grand50_bot?startgroup=true"
                     ),
                     Button.url(
-                        "Support Group", "https://t.me/teamishere"
+                        "Support Group 🎙️", "https://t.me/teamishere"
                     ),
                 ],
                 [
-                    Button.inline("Commands", data="help_menu"),
+                    Button.inline("Commands ❓", data="help_menu"),
                     Button.url(
-                        "Source ", "https://github.com/LEGENDXOP/LEGENDX"
+                        "Owner ❄️", "https://t.me/LEGENDX22"
                     ),
                 ],
-                [
-                    Button.url("Channel ", url="https://t.me/hackerget0"),
-                    Button.url("Webiste ", "hehe.com"),
-                    Button.url("LEGENDX", "https://t.me/legendxop"),
-                ],
-                [Button.inline("Close Menu", data="start_again")],
             ],
         )
     else:
-        await event.reply("I am Alive ^_^")
+        await event.reply("Heya Luna Here!,\nHow Can I Help Ya.")
 
 
 @tbot.on(events.CallbackQuery(pattern=r"start_again"))
 async def start_again(event):
     if not event.is_group:
         await event.edit(
-            "The menu is closed ",
-            buttons=[[Button.inline("Reopen Menu", data="reopen_again")]],
+            "The menu is closed 🔒",
+            buttons=[[Button.inline("Reopen Menu 🔑", data="reopen_again")]],
         )
     else:
-        await event.reply("I am Alive ^_^")
+        await event.reply("I am Alive 😘")
 
 
 @tbot.on(events.CallbackQuery(pattern=r"reopen_again"))
 async def reopen_again(event):
     if not event.is_group:
         await event.edit(
-            PM_START_TEXT,
+            pm_caption,
             buttons=[
                 [
                     Button.url(
-                        "Add To Group  ", "t.me/grand50_bot?startgroup=true"
+                        "Add To Group  👥", "t.me/GRAND50_bot?startgroup=true"
                     ),
                     Button.url(
-                        "Support Group ", "https://t.me/hackerget0"
+                        "Support Group 🎙️", "https://t.me/MissJuliaRobotSupport"
                     ),
                 ],
                 [
-                    Button.inline("Commands ", data="help_menu"),
+                    Button.inline("Commands ❓", data="help_menu"),
                     Button.url(
-                        "Source ", "https://github.com/LEGENDXOP"
+                        "Source 📀", "https://github.com/LEGENDXOP"
                     ),
                 ],
                 [
-                    Button.url("Channel ", url="https://t.me/hackerget0"),
-                    Button.url("Webiste ", "GitHub.com/legendxop.com"),
-                    Button.url("LEGENDX ", "t.me/legendxop"),
+                    Button.url(
+                        "Channel 🗞️", url="https://t.me/hackerget0"),
+                    Button.url("OWNER🌐", "t.me/Legendx22"),
+                    Button.url("join", "t.me/teamishere"),
                 ],
-                [Button.inline("Close Menu ", data="start_again")],
+                [Button.inline("Close Menu 🔒", data="start_again")],
             ],
         )
     else:
@@ -147,11 +144,11 @@ async def help(event):
             return
     if not event.is_group:
         buttons = paginate_help(event, 0, CMD_LIST, "helpme")
-        await event.reply(PM_START_TEXT, buttons=buttons)
+        await event.reply(pmt, buttons=buttons)
     else:
         await event.reply(
             "Contact me in PM to get the help menu",
-            buttons=[[Button.url("Help", "t.me/grand50_bot?start=help")]],
+            buttons=[[Button.url("Help ❓", "t.me/grand50_bot?start=help")]],
         )
 
 
@@ -170,7 +167,7 @@ async def help(event):
             return
     if not event.is_group:
         buttons = paginate_help(event, 0, CMD_LIST, "helpme")
-        await event.reply(PM_START_TEXT, buttons=buttons)
+        await event.reply(pm_caption, buttons=buttons)
     else:
         await event.reply(
             "Contact me in PM to get the help menu",
@@ -181,7 +178,7 @@ async def help(event):
 @tbot.on(events.CallbackQuery(pattern=r"help_menu"))
 async def help_menu(event):
     buttons = paginate_help(event, 0, CMD_LIST, "helpme")
-    await event.edit(PM_START_TEXT, buttons=buttons)
+    await event.edit(pm_caption, buttons=buttons)
 
 
 @tbot.on(events.callbackquery.CallbackQuery(data=re.compile(rb"helpme_next\((.+?)\)")))
@@ -202,7 +199,7 @@ async def on_plug_in_callback_query_handler(event):
 async def on_plug_in_callback_query_handler(event):
     plugin_name = event.data_match.group(1).decode("UTF-8")
     help_string = ""
-    # By @MissJuliaBeta_Robot
+    # By @RoseLoverX
 
     for i in CMD_LIST[plugin_name]:
         plugin = plugin_name.replace("_", " ")
@@ -216,7 +213,8 @@ async def on_plug_in_callback_query_handler(event):
         reply_pop_up_alert = help_string
     try:
         await event.edit(
-            reply_pop_up_alert, buttons=[[Button.inline("🔙 Back", data="go_back")]]
+            reply_pop_up_alert, buttons=[
+                [Button.inline("<< Back", data="go_back")]]
         )
     except BaseException:
         with io.BytesIO(str.encode(reply_pop_up_alert)) as out_file:
@@ -236,7 +234,7 @@ async def go_back(event):
     number = c["page"]
     # print (number)
     buttons = paginate_help(event, number, CMD_LIST, "helpme")
-    await event.edit(PM_START_TEXT, buttons=buttons)
+    await event.edit(pm_caption, buttons=buttons)
 
 
 def get_page(id):
@@ -244,8 +242,8 @@ def get_page(id):
 
 
 def paginate_help(event, page_number, loaded_plugins, prefix):
-    number_of_rows = 3
-    number_of_cols = 2
+    number_of_rows = 5
+    number_of_cols = 3
 
     to_check = get_page(id=event.sender_id)
 
@@ -280,15 +278,15 @@ def paginate_help(event, page_number, loaded_plugins, prefix):
     modulo_page = page_number % max_num_pages
     if len(pairs) > number_of_rows:
         pairs = pairs[
-            modulo_page * number_of_rows : number_of_rows * (modulo_page + 1)
+            modulo_page * number_of_rows: number_of_rows * (modulo_page + 1)
         ] + [
             (
                 custom.Button.inline(
-                    "Previous", data="{}_prev({})".format(prefix, modulo_page)
+                    "<", data="{}_prev({})".format(prefix, modulo_page)
                 ),
-                custom.Button.inline("close", data="reopen_again"),
+                custom.Button.inline("⚜️", data="reopen_again"),
                 custom.Button.inline(
-                    "Next", data="{}_next({})".format(prefix, modulo_page)
+                    ">", data="{}_next({})".format(prefix, modulo_page)
                 ),
             )
         ]
