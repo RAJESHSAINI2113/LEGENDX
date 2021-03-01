@@ -2,7 +2,7 @@ import requests
 from LEGEND import tbot
 from LEGEND.events import register
 url = "https://iamai.p.rapidapi.com/ask"
-
+"""
 @register(pattern="^/q (.*)")
 async def hmm(event):
   test = event.pattern_match.group(1)
@@ -23,3 +23,4 @@ async def hmm(event):
   result = (lodu['message']['text'])
   await event.reply(result)
 
+"""
