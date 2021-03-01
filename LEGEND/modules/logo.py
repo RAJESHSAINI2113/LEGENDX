@@ -1,4 +1,4 @@
-#By @RoseLoverX
+#By @LEGENDX22
 from LEGEND.events import register
 from LEGEND import CMD_HELP
 from LEGEND import tbot as borg
