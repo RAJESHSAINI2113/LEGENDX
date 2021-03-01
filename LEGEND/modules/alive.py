@@ -14,7 +14,7 @@ from LEGEND.events import register
 from LEGEND import tbot
 from LEGEND import tbot as tgbot
 PHOTO = "https://telegra.ph/file/42f05b10e4a417eb9e623.jpg"
-@register(pattern="/awake")
+@register(pattern="/alive")
 async def awake(event):
   LEGENDX = "HELLO THIS IS GRAND OFFICIAL \n\n\n"
   LEGENDX += "ALL SYSTEM WORKING PROPERLY\n\n"
