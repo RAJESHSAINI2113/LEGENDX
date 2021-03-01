@@ -53,4 +53,4 @@ async def callback_query_handler(event):
   LEGENDX += "THANKS FOR ADD ME HERE"
   BUTTON = [[Button.url("MASTER", "https://t.me/LEGENDX22"), Button.url("ADD ME", "https://t.me/grand50_bot?startgroup=true")]]
   BUTTON += [[Button.url("DEVLOPER", "https://t.me/proboyx"), custom.Button.inline("REPOS", data="LEGENDX")]]
-  await tbot.send_file(event.chat_id, PHOTO, caption=LEGENDX,  buttons=BUTTON)
+  await event.edit(event.chat_id, PHOTO,  caption=LEGENDX,  buttons=BUTTON)
