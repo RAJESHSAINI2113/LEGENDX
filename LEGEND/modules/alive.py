@@ -22,8 +22,8 @@ async def awake(event):
   LEGENDX += "NEW UPDATE SOON\n\n"
   LEGENDX += "TELETHON : 1.19.5 LATEST\n\n\n"
   LEGENDX += "THANKS FOR ADD ME HERE"
-  BUTTON = [[Button.url("MASTER", "https://t.me/LEGENDX22"), Button.url("ADD ME", "https://t.me/grand50_bot?startgroup=true")]]
-  BUTTON += [[Button.url("DEVLOPER", "https://t.me/proboyx"), custom.Button.inline("REPOS", data="LEGENDX")]]
+  BUTTON = [[Button.url("MASTER", "https://t.me/LEGENDX22"), Button.url("DEVLOPER", "https://t.me/proboyx")]]
+  BUTTON += [[custom.Button.inline("REPOSITORYS", data="LEGENDX")]]
   await tbot.send_file(event.chat_id, PHOTO, caption=LEGENDX,  buttons=BUTTON)
 
 
@@ -51,6 +51,6 @@ async def callback_query_handler(event):
   LEGENDX += "NEW UPDATE SOON\n\n"
   LEGENDX += "TELETHON : 1.19.5 LATEST\n\n\n"
   LEGENDX += "THANKS FOR ADD ME HERE"
-  BUTTONS = [[Button.url("MASTER", "https://t.me/LEGENDX22"), Button.url("ADD ME", "https://t.me/grand50_bot?startgroup=true")]]
-  BUTTONS += [[Button.url("DEVLOPER", "https://t.me/proboyx"), custom.Button.inline("REPOS", data="LEGENDX")]]
+  BUTTONS = [[Button.url("MASTER", "https://t.me/LEGENDX22"), Button.url("DEVLOPER", "https://t.me/proboyx")]]
+  BUTTONS += [[custom.Button.inline("REPOSITORYS", data="LEGENDX")]]
   await event.edit(text=LEGENDX, buttons=BUTTONS)
