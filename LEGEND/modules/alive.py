@@ -13,7 +13,7 @@ async def alive(event):
     elif event.sender_id in SUDO_USERS:
         await event.reply("I'm Alive Pro!")
     elif event.sender_id not in SUDO_USERS:
-        await event.reply("★彡[Anie]彡★")
+        await event.reply("★彡[GRAND OFFICIAL]彡★")
 """
 @register(pattern="^/die")
 async def alive(event):
