@@ -1,5 +1,9 @@
 aiohttp
 pyrogram
+youtube_search
+search_engine_parser
+pornhub_api
+youtube-search-python
 TgCrypto
 asyncio
 pymongo
