@@ -1,10 +1,10 @@
 """
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-                 MADE BY LEGENDX AND PROBOY
-                   CREDITS TEAMLEGEND 
+(((((((((((((((((((((((@rajeshsaini2113)))))))))))))))))))))))))))
+(((((((((((((((((((((((@rajeshsaini2113)))))))))))))))))))))))))))
+(((((((((((((((((((((((@rajeshsaini2113)))))))))))))))))))))))))))
+(((((((((((((((((((((((@rajeshsaini2113)))))))))))))))))))))))))))
+                 MADE BY Rajesh
+                   CREDITS TEAMRAJESH 
                 PLEASE DON'T REMOVE CREDITS
 """
 
@@ -13,16 +13,16 @@ import re, os
 from LEGEND.events import register
 from LEGEND import tbot
 from LEGEND import tbot as tgbot
-PHOTO = "https://telegra.ph/file/42f05b10e4a417eb9e623.jpg"
+PHOTO = "https://telegra.ph/file/1c1cc4eccbdfc737e2f58.jpg"
 @register(pattern=("/alive|/start"))
 async def awake(event):
-  LEGENDX = "HELLO THIS IS GRAND OFFICIAL \n\n\n"
+  LEGENDX = "HELLO THIS IS RAJESH OFFICIAL \n\n\n"
   LEGENDX += "ALL SYSTEM WORKING PROPERLY\n\n"
   LEGENDX += "GRAND OS : 3.0 LATEST\n\n"
   LEGENDX += "NEW UPDATE SOON\n\n"
   LEGENDX += "TELETHON : 1.19.5 LATEST\n\n\n"
   LEGENDX += "THANKS FOR ADD ME HERE"
-  BUTTON = [[Button.url("MASTER", "https://t.me/LEGENDX22"), Button.url("DEVLOPER", "https://t.me/proboyx")]]
+  BUTTON = [[Button.url("MASTER", "https://t.me/rajeshsaini2113"), Button.url("DEVLOPER", "https://t.me/proboyx")]]
   BUTTON += [[custom.Button.inline("REPOSITORYS", data="LEGENDX")]]
   await tbot.send_file(event.chat_id, PHOTO, caption=LEGENDX,  buttons=BUTTON)
 
@@ -31,7 +31,7 @@ async def awake(event):
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"LEGENDX")))
 async def callback_query_handler(event):
-# inline by LEGENDX22 and PROBOY22 🔥
+# inline by rajeshsaini2113 and PROBOY22 🔥
   PROBOYX = [[Button.url("REPO-LEGEND", "https://github.com/LEGENDXOP/LEGEND-BOT"), Button.url("REPO-ULTROID X", "https://github.com/ULTROID-OP/ULTROID-BOT")]]
   PROBOYX +=[[Button.url("DEPLOY-LEGEND", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Flegendxop%2Flegend-bot&template=https%3A%2F%2Fgithub.com%2FLEGENDXOP%2FLEGEND-BOTP%2FLE"), Button.url("DEPLOY-ULTROID", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FULTROID-OP%2FULTROID-BOT&template=https%3A%2F%2Fgithub.com%2FULTROID-OP%2FULTROID-BOT")]]
   PROBOYX +=[[Button.url("TUTORIAL", "https://youtu.be/rGCSSFPsS4Q"), Button.url("STRING-SESSION", "https://repl.it/@legendx22/LEGEND-BOT#main.py")]]
@@ -44,13 +44,13 @@ async def callback_query_handler(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"PROBOY")))
 async def callback_query_handler(event):
   global PHOTO
-# inline by LEGENDX22 and PROBOY22 🔥
-  LEGENDX = "HELLO THIS IS GRAND OFFICIAL \n\n\n"
+# inline by rajeshsaini2113 🔥
+  LEGENDX = "HELLO THIS IS RAJESH OFFICIAL \n\n\n"
   LEGENDX += "ALL SYSTEM WORKING PROPERLY\n\n"
   LEGENDX += "GRAND OS : 3.0 LATEST\n\n"
   LEGENDX += "NEW UPDATE SOON\n\n"
   LEGENDX += "TELETHON : 1.19.5 LATEST\n\n\n"
   LEGENDX += "THANKS FOR ADD ME HERE"
-  BUTTONS = [[Button.url("MASTER", "https://t.me/LEGENDX22"), Button.url("DEVLOPER", "https://t.me/proboyx")]]
+  BUTTONS = [[Button.url("MASTER", "https://t.me/rajeshsaini2113"), Button.url("DEVLOPER", "https://t.me/Anahita999")]]
   BUTTONS += [[custom.Button.inline("REPOSITORYS", data="LEGENDX")]]
   await event.edit(text=LEGENDX, buttons=BUTTONS)
