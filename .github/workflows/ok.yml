@@ -1,5 +1,5 @@
 
-name: LEGENDX
+name: RAJESH
 
 on: push
 
@@ -35,6 +35,6 @@ jobs:
 
           repository: .
 
-          commit_user_name: LEGENDXOP
+          commit_user_name: rajeshsaini2113
 
-          commit_user_email: legendxx08377@gmail.com
+          commit_user_email: sainirajesh2115@gmail.com
